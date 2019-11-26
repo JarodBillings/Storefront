@@ -1,0 +1,15 @@
+TODO:
+X Change all CSS to use vars to allow easy Change
+- Relayout the page to have a more prominant call-to-action
+- Think of Company Name
+    - Make company logo
+    - Make company color scheme
+    - Find company font
+- Find color scheme
+- Fix links to broken pages
+- Fix JavaScrpit timer
+- Get all assests
+    - Primaryily selling PC computer parts
+        - CPU, Cooler, GPU, Mobo, Case, Keyboard, Mouse, PSU, RAM, Storage
+    
+

@@ -1,0 +1,36 @@
+/*----------------------------*\
+  Typography
+  Colors:
+	Body 		: #333
+	Headers 	: #2B2D42
+	Primary 	: #D10024
+	Dark 		: #15161D ##1E1F29
+    Grey 		: #E4E7ED #FBFBFC #8D99AE #B9BABC
+
+   --body-prim-color: #333;
+  --header-prim-color: #2B2D42;
+  --primary-color: #D10024;
+  --dark-primary: #15161D;
+  --dark-secondary: #1E1F29;
+
+  --grey-prim-pair-1: #E4E7ED;
+  --grey-second-pair-1: #FBFBFC;
+
+  --grey-prim-pair-2: #8D99AE;
+  --grey-second-pair-2: #B9BABA;
+
+  --font-prim: 'Montserrat', sans-serif;
+
+  
+  Font-Family: Montserrat, sans-serif
+\*----------------------------*/
+
+
+:root{
+    --body-prim-color: #333;
+    --header-prim-color: #2B2D42;
+    --primary-color: #3aafb9;
+  
+    --font-prim: 'Montserrat', sans-serif;
+  
+}
