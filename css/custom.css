@@ -119,35 +119,73 @@ div.qty {
 .add-to-wishlist:hover{
   color: var(--primary-color-alt) !important;
 }
-@-webkit-keyframes slideOutRight {
-  from {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
 
-  to {
-    visibility: hidden;
-    -webkit-transform: translate3d(100%, 0, 0);
-    transform: translate3d(100%, 0, 0);
-  }
+.clock-container{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
-@keyframes slideOutRight {
-  from {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-
-  to {
-    visibility: hidden;
-    -webkit-transform: translate3d(100%, 0, 0);
-    transform: translate3d(100%, 0, 0);
-  }
+.digits{
+  height: 200px;
+  width: 50px;
+  padding: 0;
+  position: relative;
+  margin: auto;
+  border: 1px solid red;
+  list-style-type: none;
+  transform-style: preserve-3d;
+  text-align: center;
+}
+/*
+.clock-container{
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+  transform-style: preserve-3d;
+  transform: rotateX(90deg);
 }
 
-.slideOutRight {
-  -webkit-animation-name: slideOutRight;
-  animation-name: slideOutRight;
+.digits{
+  height: 200px;
+  width: 50px;
+  padding: 0;
+  position: relative;
+  margin: auto;
+  list-style-type: none;
+  border: 1px solid red;
+  transform-style: preserve-3d;
+  transform: rotateY(90deg);
+  display: inline-block;
 }
 
+.digits > li{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  transform-style: preserve-3d;
+  transform-origin: bottom;
+  border: 1px solid blue;
+}
 
+.digits > li > span{
+  height: 50px;
+  width: 50px;
+  display: inline-block;
+  text-align: center;
+  border: 1px solid yellow;
+  border-radius: 50px;
+  transform-style: preserve-3d;
+  transform: translateX(-50%) translateY(-40px) rotateX(90deg) rotate(90deg);
+}
+
+*/

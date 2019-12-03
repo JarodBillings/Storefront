@@ -1,3 +1,10 @@
+$(document).ready(()=> {
+	let digitItem = $(".digits > li");
+	for(let i = 0; i < digitItem.length; i++){
+		let angle = (360 / digitItem.length) * i;
+		$(digitItem[i]).css("transform",`rotate(${angle}deg)`);
+	}
+});
 
 (function ($) {
 	"use strict"
