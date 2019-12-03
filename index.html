@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-	<title>Electro - HTML Ecommerce Template</title>
+	<title>Shop Circuit</title>
 
 	<!-- Google font -->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
@@ -41,21 +41,6 @@
 <body>
 	<!-- HEADER -->
 	<header>
-		<!-- TOP HEADER -->
-		<div id="top-header">
-			<div class="container">
-				<ul class="header-links pull-left">
-					<li><a href="#"><i class="fa fa-phone"></i> +021-95-51-84</a></li>
-					<li><a href="#"><i class="fa fa-envelope-o"></i> email@email.com</a></li>
-					<li><a href="#"><i class="fa fa-map-marker"></i> 1734 Stonecoal Road</a></li>
-				</ul>
-				<ul class="header-links pull-right">
-					<li><a href="#"><i class="fa fa-dollar"></i> USD</a></li>
-					<li><a href="#"><i class="fa fa-user-o"></i> My Account</a></li>
-				</ul>
-			</div>
-		</div>
-		<!-- /TOP HEADER -->
 
 		<!-- MAIN HEADER -->
 		<div id="header">
@@ -95,9 +80,9 @@
 							<!-- Wishlist -->
 							<div>
 								<a href="#">
-									<i class="fa fa-heart-o"></i>
-									<span>Your Wishlist</span>
-									<div class="qty">2</div>
+									<ul class="header-links pull-right">
+										<li><a href="#"><i class="fa fa-user-o"></i> My Account</a></li>
+									</ul>
 								</a>
 							</div>
 							<!-- /Wishlist -->
@@ -175,11 +160,11 @@
 				<ul class="main-nav nav navbar-nav">
 					<li class="active"><a href="#">Home</a></li>
 					<li><a href="#">Hot Deals</a></li>
-					<li><a href="#">Categories</a></li>
-					<li><a href="#">Laptops</a></li>
-					<li><a href="#">Smartphones</a></li>
-					<li><a href="#">Cameras</a></li>
-					<li><a href="#">Accessories</a></li>
+					<li><a href="#">CPU</a></li>
+					<li><a href="#">RAM</a></li>
+					<li><a href="#">GPU</a></li>
+					<li><a href="#">Coolers</a></li>
+					<li><a href="#">Cases</a></li>
 				</ul>
 				<!-- /NAV -->
 			</div>
@@ -194,39 +179,52 @@
 		<div class="container">
 			<!-- row -->
 			<div class="row">
-				<div class="col-md-12">
+				<div class="col-md-3 hot-deal-prev">
+					<a href="#">
+						<img class="hot-deal-img" src="img/product01.png" />
+						<h4>Apple Macbook Pro</h4>
+					</a>
+				</div>
+				<div class="col-md-6">
 					<div class="hot-deal">
 						<ul class="hot-deal-countdown">
 							<li>
 								<div>
-									<h3>02</h3>
-									<span>Days</span>
+									<h3 class="hot-deal-countdown-num">02</h3>
+									<span class="hot-deal-countdown-day">Days</span>
 								</div>
 							</li>
 							<li>
 								<div>
-									<h3>10</h3>
-									<span>Hours</span>
+									<h3 class="hot-deal-countdown-num">10</h3>
+									<span class="hot-deal-countdown-day">Hours</span>
 								</div>
 							</li>
 							<li>
 								<div>
-									<h3>34</h3>
-									<span>Mins</span>
+									<h3 class="hot-deal-countdown-num">34</h3>
+									<span class="hot-deal-countdown-day">Mins</span>
 								</div>
 							</li>
 							<li>
 								<div>
-									<h3>60</h3>
-									<span>Secs</span>
+									<h3 class="hot-deal-countdown-num">60</h3>
+									<span class="hot-deal-countdown-day">Secs</span>
 								</div>
 							</li>
 						</ul>
-						<h2 class="text-uppercase">hot deal this week</h2>
-						<p>New Collection Up to 50% OFF</p>
+						<h2 class="text-uppercase">Cyber Monday!</h2>
+						<p>New Laptops Up to 50% OFF</p>
 						<a class="primary-btn cta-btn" href="#">Shop now</a>
 					</div>
 				</div>
+				<div class="col-md-3 hot-deal-prev">
+					<a href="#">
+						<img class="hot-deal-img" src="img/product01.png" />
+						<h4>Razer Blade 15</h4>
+					</a>
+				</div>
+
 			</div>
 			<!-- /row -->
 		</div>
@@ -234,7 +232,7 @@
 	</div>
 	<!-- /HOT DEAL SECTION -->
 
-	
+
 	<!-- TOP PRODUCTS -->
 	<div class="section">
 		<!-- container -->
@@ -264,9 +262,10 @@
 						<div class="products-tabs">
 							<!-- tab -->
 							<div id="tab1" class="tab-pane active">
+								<div id="slick-nav-1" class="products-slick-nav"></div>
 								<div class="products-slick" data-nav="#slick-nav-1">
 									<!-- product -->
-									<div class="product">
+									<div class="product" data-sale="30">
 										<div class="product-img">
 											<img src="./img/product01.png" alt="">
 											<div class="product-label">
@@ -275,17 +274,9 @@
 											</div>
 										</div>
 										<div class="product-body">
-											<p class="product-category">Category</p>
-											<h3 class="product-name"><a href="#">product name goes here</a></h3>
-											<h4 class="product-price">$980.00 <del
+											<h3 class="product-name"><a href="#">MicroSoft Surface 2</a></h3>
+											<h4 class="product-price">$699.00 <del
 													class="product-old-price">$990.00</del></h4>
-											<div class="product-rating">
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star"></i>
-											</div>
 											<div class="product-btns">
 												<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span
 														class="tooltipp">add to wishlist</span></button>
@@ -311,17 +302,8 @@
 											</div>
 										</div>
 										<div class="product-body">
-											<p class="product-category">Category</p>
-											<h3 class="product-name"><a href="#">product name goes here</a></h3>
-											<h4 class="product-price">$980.00 <del
-													class="product-old-price">$990.00</del></h4>
-											<div class="product-rating">
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star-o"></i>
-											</div>
+											<h3 class="product-name"><a href="#">Lenovo ThinkPad</a></h3>
+											<h4 class="product-price">$980.00 </h4>
 											<div class="product-btns">
 												<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span
 														class="tooltipp">add to wishlist</span></button>
@@ -343,16 +325,13 @@
 										<div class="product-img">
 											<img src="./img/product03.png" alt="">
 											<div class="product-label">
-												<span class="sale">-30%</span>
+												<span class="sale">-60%</span>
 											</div>
 										</div>
 										<div class="product-body">
-											<p class="product-category">Category</p>
-											<h3 class="product-name"><a href="#">product name goes here</a></h3>
-											<h4 class="product-price">$980.00 <del
-													class="product-old-price">$990.00</del></h4>
-											<div class="product-rating">
-											</div>
+											<h3 class="product-name"><a href="#">Apple MacBook Pro</a></h3>
+											<h4 class="product-price">$200.00 <del
+													class="product-old-price">$500.00</del></h4>
 											<div class="product-btns">
 												<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span
 														class="tooltipp">add to wishlist</span></button>
@@ -375,17 +354,8 @@
 											<img src="./img/product04.png" alt="">
 										</div>
 										<div class="product-body">
-											<p class="product-category">Category</p>
-											<h3 class="product-name"><a href="#">product name goes here</a></h3>
-											<h4 class="product-price">$980.00 <del
-													class="product-old-price">$990.00</del></h4>
-											<div class="product-rating">
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star"></i>
-											</div>
+											<h3 class="product-name"><a href="#">Dell XPS 13</a></h3>
+											<h4 class="product-price">$1300.00</h4>
 											<div class="product-btns">
 												<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span
 														class="tooltipp">add to wishlist</span></button>
@@ -408,17 +378,8 @@
 											<img src="./img/product05.png" alt="">
 										</div>
 										<div class="product-body">
-											<p class="product-category">Category</p>
-											<h3 class="product-name"><a href="#">product name goes here</a></h3>
-											<h4 class="product-price">$980.00 <del
-													class="product-old-price">$990.00</del></h4>
-											<div class="product-rating">
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star"></i>
-											</div>
+											<h3 class="product-name"><a href="#">Razer Blade 15</a></h3>
+											<h4 class="product-price">$2300.00</h4>
 											<div class="product-btns">
 												<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span
 														class="tooltipp">add to wishlist</span></button>
@@ -435,7 +396,6 @@
 									</div>
 									<!-- /product -->
 								</div>
-								<div id="slick-nav-1" class="products-slick-nav"></div>
 							</div>
 							<!-- /tab -->
 						</div>
@@ -462,7 +422,7 @@
 							<img src="./img/shop01.png" alt="">
 						</div>
 						<div class="shop-body">
-							<h3>Laptop<br>Collection</h3>
+							<h3>Laptops</h3>
 							<a href="#" class="cta-btn">Shop now <i class="fa fa-arrow-circle-right"></i></a>
 						</div>
 					</div>
@@ -476,7 +436,7 @@
 							<img src="./img/shop03.png" alt="">
 						</div>
 						<div class="shop-body">
-							<h3>Accessories<br>Collection</h3>
+							<h3>Desktops</h3>
 							<a href="#" class="cta-btn">Shop now <i class="fa fa-arrow-circle-right"></i></a>
 						</div>
 					</div>
@@ -490,7 +450,7 @@
 							<img src="./img/shop02.png" alt="">
 						</div>
 						<div class="shop-body">
-							<h3>Cameras<br>Collection</h3>
+							<h3>Smartphones</h3>
 							<a href="#" class="cta-btn">Shop now <i class="fa fa-arrow-circle-right"></i></a>
 						</div>
 					</div>
@@ -549,13 +509,11 @@
 				<div class="row">
 					<div class="col-md-3 col-xs-6">
 						<div class="footer">
-							<h3 class="footer-title">About Us</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-								incididunt ut.</p>
+							<h3 class="footer-title">Contact Us</h3>
 							<ul class="footer-links">
-								<li><a href="#"><i class="fa fa-map-marker"></i>1734 Stonecoal Road</a></li>
-								<li><a href="#"><i class="fa fa-phone"></i>+021-95-51-84</a></li>
-								<li><a href="#"><i class="fa fa-envelope-o"></i>email@email.com</a></li>
+								<li><a href="#"><i class="fa fa-map-marker"></i>10 Clarkson Ave</a></li>
+								<li><a href="#"><i class="fa fa-phone"></i>(518)-207-5951</a></li>
+								<li><a href="#"><i class="fa fa-envelope-o"></i>support@shopcircuit.com</a></li>
 							</ul>
 						</div>
 					</div>
@@ -636,6 +594,7 @@
 	<script src="js/slick.min.js"></script>
 	<script src="js/nouislider.min.js"></script>
 	<script src="js/jquery.zoom.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.15/lodash.min.js"></script>
 	<script src="js/main.js"></script>
 
 </body>
