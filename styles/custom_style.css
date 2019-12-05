@@ -1,0 +1,9 @@
+:root{
+    --primary-color: #FF6347;
+}
+.footer{
+    all: initial;
+}
+.footer_background{
+    background-color: green;
+}
