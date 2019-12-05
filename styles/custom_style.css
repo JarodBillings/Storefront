@@ -1,9 +1,41 @@
 :root{
     --primary-color: #FF6347;
+    --primary-grey: #343633;
+    --primary-white: #f7f0f5;
+}
+.newsletter{
+    padding-bottom: 20px;
 }
 .footer{
-    all: initial;
+    position: initial;
 }
 .footer_background{
-    background-color: green;
+    background-color: var(--primary-grey);
+}
+
+.foot-header{
+    font-size: 20px;
+    color: var(--primary-white);
+    text-align: center;
+    padding-top: 10px;
+}
+
+.footer_social{
+    text-align:initial;
+    width: 100%;
+}
+.footer_social ul li{
+    display: block;
+}
+.social-ico{
+    padding: 10px;
+    display: block;
+    font-size: 150%;
+}
+
+.social-ico {
+    width: 65px;
+}
+.copyright{
+    color: var(--primary-white);
 }
