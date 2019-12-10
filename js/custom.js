@@ -40,7 +40,7 @@ $(document).ready(function () {
 	initHomeSlider();
 	initSearch();
 	initMenu();
-	initIsotope();
+	//initIsotope();
 
 	/* 
 
@@ -132,14 +132,9 @@ $(document).ready(function () {
 	*/
 
 	function initSearch() {
-		if ($('.search').length && $('.search_panel').length) {
-			var search = $('.search');
-			var panel = $('.search_panel');
-
-			search.on('click', function () {
-				panel.toggleClass('active');
-			});
-		}
+		let placeText = ["Apple", "Samsung", "HTC", "Search"];
+		let choice = placeText[Math.floor(Math.random() * placeText.length)];
+		$("#search-input").attr("placeholder", choice);
 	}
 
 	/* 

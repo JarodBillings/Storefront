@@ -67,7 +67,7 @@ div.container:nth-child(2)>div:nth-child(1)>div:nth-child(1) {
 
 .home_slider_container {
     width: 100%;
-    height: 100%;
+    height: 500px;
     padding: 0;
 }
 
@@ -80,19 +80,28 @@ div.container:nth-child(2)>div:nth-child(1)>div:nth-child(1) {
     color: var(--primary-white);
 }
 
+.main_nav {
+    display: inline-block;
+}
+
+.search_icon {
+    display: inline-block;
+    margin-right: 5px;
+}
+
 .header_container {
     background: #fdd45a;
 }
 
-span.fa-twitter {
+.fa-twitter-square {
     color: #38A1F3;
 }
 
-span.fa-facebook {
+.fa-facebook-square {
     color: #4267b2;
 }
 
-span.fa-instagram {
+.fa-instagram {
     background: #d6249f;
     border-radius: 40px;
     color: #fff;
@@ -123,4 +132,37 @@ span.fa-instagram {
 .avds_xl_content {
     right: 20%;
     height: 50%;
+}
+
+.avds {
+    padding-top: 20px;
+}
+
+.footer {
+    background-color: var(--primary-grey);
+}
+
+.avds_title {
+    z-index: 2;
+}
+
+.avds_small_content {
+    max-width: 100%;
+}
+
+.product_grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product {
+    margin: 10px;
+    outline-offset: 3px;
+    outline: 1px solid var(--primary-white);
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1600px;
+    }
 }
