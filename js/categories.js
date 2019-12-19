@@ -13,8 +13,7 @@
 
 ******************************/
 
-$(document).ready(function()
-{
+$(document).ready(function () {
 	"use strict";
 
 	/* 
@@ -29,13 +28,11 @@ $(document).ready(function()
 
 	setHeader();
 
-	$(window).on('resize', function()
-	{
+	$(window).on('resize', function () {
 		setHeader();
 	});
 
-	$(document).on('scroll', function()
-	{
+	$(document).on('scroll', function () {
 		setHeader();
 	});
 
@@ -49,14 +46,11 @@ $(document).ready(function()
 
 	*/
 
-	function setHeader()
-	{
-		if($(window).scrollTop() > 100)
-		{
+	function setHeader() {
+		if ($(window).scrollTop() > 100) {
 			header.addClass('scrolled');
 		}
-		else
-		{
+		else {
 			header.removeClass('scrolled');
 		}
 	}
@@ -67,19 +61,6 @@ $(document).ready(function()
 
 	*/
 
-	function initSearch()
-	{
-		if($('.search').length && $('.search_panel').length)
-		{
-			var search = $('.search');
-			var panel = $('.search_panel');
-
-			search.on('click', function()
-			{
-				panel.toggleClass('active');
-			});
-		}
-	}
 
 	/* 
 
@@ -87,68 +68,53 @@ $(document).ready(function()
 
 	*/
 
-	function initMenu()
-	{
-		if($('.hamburger').length)
-		{
+	function initMenu() {
+		if ($('.hamburger').length) {
 			var hamb = $('.hamburger');
 
-			hamb.on('click', function(event)
-			{
+			hamb.on('click', function (event) {
 				event.stopPropagation();
 
-				if(!menuActive)
-				{
+				if (!menuActive) {
 					openMenu();
-					
-					$(document).one('click', function cls(e)
-					{
-						if($(e.target).hasClass('menu_mm'))
-						{
+
+					$(document).one('click', function cls(e) {
+						if ($(e.target).hasClass('menu_mm')) {
 							$(document).one('click', cls);
 						}
-						else
-						{
+						else {
 							closeMenu();
 						}
 					});
 				}
-				else
-				{
+				else {
 					$('.menu').removeClass('active');
 					menuActive = false;
 				}
 			});
 
 			//Handle page menu
-			if($('.page_menu_item').length)
-			{
+			if ($('.page_menu_item').length) {
 				var items = $('.page_menu_item');
-				items.each(function()
-				{
+				items.each(function () {
 					var item = $(this);
 
-					item.on('click', function(evt)
-					{
-						if(item.hasClass('has-children'))
-						{
+					item.on('click', function (evt) {
+						if (item.hasClass('has-children')) {
 							evt.preventDefault();
 							evt.stopPropagation();
 							var subItem = item.find('> ul');
-						    if(subItem.hasClass('active'))
-						    {
-						    	subItem.toggleClass('active');
-								TweenMax.to(subItem, 0.3, {height:0});
-						    }
-						    else
-						    {
-						    	subItem.toggleClass('active');
-						    	TweenMax.set(subItem, {height:"auto"});
-								TweenMax.from(subItem, 0.3, {height:0});
-						    }
+							if (subItem.hasClass('active')) {
+								subItem.toggleClass('active');
+								TweenMax.to(subItem, 0.3, { height: 0 });
+							}
+							else {
+								subItem.toggleClass('active');
+								TweenMax.set(subItem, { height: "auto" });
+								TweenMax.from(subItem, 0.3, { height: 0 });
+							}
 						}
-						else
-						{
+						else {
 							evt.stopPropagation();
 						}
 					});
@@ -157,16 +123,14 @@ $(document).ready(function()
 		}
 	}
 
-	function openMenu()
-	{
+	function openMenu() {
 		var fs = $('.menu');
 		fs.addClass('active');
 		hambActive = true;
 		menuActive = true;
 	}
 
-	function closeMenu()
-	{
+	function closeMenu() {
 		var fs = $('.menu');
 		fs.removeClass('active');
 		hambActive = false;
@@ -179,13 +143,11 @@ $(document).ready(function()
 
 	*/
 
-	function initIsotope()
-	{
+	function initIsotope() {
 		var sortingButtons = $('.product_sorting_btn');
 		var sortNums = $('.num_sorting_btn');
 
-		if($('.product_grid').length)
-		{
+		if ($('.product_grid').length) {
 			var grid = $('.product_grid').isotope({
 				itemSelector: '.product',
 				layoutMode: 'fitRows',
@@ -193,41 +155,37 @@ $(document).ready(function()
 				{
 					gutter: 30
 				},
-	            getSortData:
-	            {
-	            	price: function(itemElement)
-	            	{
-	            		var priceEle = $(itemElement).find('.product_price').text().replace( '$', '' );
-	            		return parseFloat(priceEle);
-	            	},
-	            	name: '.product_name',
-	            	stars: function(itemElement)
-	            	{
-	            		var starsEle = $(itemElement).find('.rating');
-	            		var stars = starsEle.attr("data-rating");
-	            		return stars;
-	            	}
-	            },
-	            animationOptions:
-	            {
-	                duration: 750,
-	                easing: 'linear',
-	                queue: false
-	            }
-	        });
+				getSortData:
+				{
+					price: function (itemElement) {
+						var priceEle = $(itemElement).find('.product_price').text().replace('$', '');
+						return parseFloat(priceEle);
+					},
+					name: '.product_name',
+					stars: function (itemElement) {
+						var starsEle = $(itemElement).find('.rating');
+						var stars = starsEle.attr("data-rating");
+						return stars;
+					}
+				},
+				animationOptions:
+				{
+					duration: 750,
+					easing: 'linear',
+					queue: false
+				}
+			});
 
-	        // Sort based on the value from the sorting_type dropdown
-	        sortingButtons.each(function()
-	        {
-	        	$(this).on('click', function()
-	        	{
-	        		var parent = $(this).parent().parent().find('.sorting_text');
-		        		parent.text($(this).text());
-		        		var option = $(this).attr('data-isotope-option');
-		        		option = JSON.parse( option );
-	    				grid.isotope( option );
-	        	});
-	        });
+			// Sort based on the value from the sorting_type dropdown
+			sortingButtons.each(function () {
+				$(this).on('click', function () {
+					var parent = $(this).parent().parent().find('.sorting_text');
+					parent.text($(this).text());
+					var option = $(this).attr('data-isotope-option');
+					option = JSON.parse(option);
+					grid.isotope(option);
+				});
+			});
 		}
 	}
 
