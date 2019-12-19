@@ -61,6 +61,20 @@ $(document).ready(function () {
 
 	*/
 
+	function initSearch() {
+
+		if ($('.search').length && $('.search_panel').length) {
+
+			var search = $('.search');
+			var panel = $('.search_panel');
+
+			search.on('click', function () {
+				panel.toggleClass('active');
+			});
+
+		}
+	}
+
 
 	/* 
 
@@ -153,7 +167,7 @@ $(document).ready(function () {
 				layoutMode: 'fitRows',
 				fitRows:
 				{
-					gutter: 30
+					gutter: 0
 				},
 				getSortData:
 				{
